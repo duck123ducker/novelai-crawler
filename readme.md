@@ -25,7 +25,7 @@ pip install -r requirements.txt
 例如扫描需要10.0.0.0到10.2.255.255的所有6969端口，一轮扫描停止后3600秒开始下一轮扫描。
 
 ```
-python main.py --f '10.0.0.0' --t '10.2.255.255' --i 3600
+python main.py --f "10.0.0.0" --t "10.2.255.255" --i 3600
 ```
 
 扫描结果记录在open_port.txt文件中，可重复扫描添加上一轮没扫描到的地址。
@@ -43,7 +43,7 @@ python online_test.py
 ### 批量提交任务
 
 ```
-python post.py --pmpt 'example' --uc 'example'
+python post.py --pmpt "example" --uc "example"
 ```
 
 从open_port.txt中自动向在线的地址一次提交生成一张图片的任务，得到返回图片后再次循环提交，无限循环提交任务，需要手动终止，生成的图片保存在images文件夹中。
