@@ -44,7 +44,7 @@ if __name__ == "__main__":
     parser.add_argument('--uc', type=str, default=None)
     parser.add_argument('--h', type=int, default=768)
     parser.add_argument('--w', type=int, default=512)
-    parser.add_argument('--scl', type=int, default=10)
+    parser.add_argument('--scl', type=int, default=12)
     parser.add_argument('--stp', type=int, default=28)
     args = parser.parse_args()
     if args.pmpt==None:
