@@ -40,7 +40,7 @@ python main.py --f "10.0.0.0" --t "10.2.255.255" --i 3600
 python online_test.py
 ```
 
-### 批量提交任务~~（分布式计算）~~
+### 批量提交任务 ~~分布式计算~~
 
 ```
 python post.py --pmpt "example" --uc "example"
