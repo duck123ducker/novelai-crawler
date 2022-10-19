@@ -16,7 +16,7 @@ def int2ip(num):
 def main(f,to,tm):
     print(f, to)
     while 1:
-        port=6969
+        port=7070
         start_time = time.time()
         for target in [int2ip(x) for x in range(ip2int(f), ip2int(to) + 1)]:
             print(target)

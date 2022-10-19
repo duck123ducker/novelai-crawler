@@ -53,13 +53,13 @@ if __name__ == "__main__":
     tsktm = time.strftime('%Y-%m-%d_%H_%M_%S/', time.gmtime(time.time() + 28800))
     os.mkdir('images/' + tsktm)
     with open('images/' + tsktm + 'prompt_uc.txt', "a") as f:
-        f.write(prompt + '\n' + uc)
+        f.write(args.pmpt + '\n' + args.uc)
     while 1:
         a = r_f('open_port.txt')
         for address in a:
             if address not in list(stat.keys()):
                 stat[address]=0
             if stat[address]==0:
-                t = Thread(target=task, args=(address,args.prompt,args.uc,args.h,args.w,args.scl,args.stp))
+                t = Thread(target=task, args=(address,args.pmpt,args.uc,args.h,args.w,args.scl,args.stp))
                 t.start()
         time.sleep(random.randint(30,60))
