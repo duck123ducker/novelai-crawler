@@ -15,10 +15,11 @@ def int2ip(num):
 
 def main(f,to,tm):
     print(f, to)
+    port=6969
+    ips=[int2ip(x) for x in range(ip2int(f), ip2int(to) + 1)]
     while 1:
-        port=6969
         start_time = time.time()
-        for target in [int2ip(x) for x in range(ip2int(f), ip2int(to) + 1)]:
+        for target in ips:
             print(target)
             t = Thread(target=portscan, args=(target, port))
             t.start()
